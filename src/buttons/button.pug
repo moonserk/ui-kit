@@ -1,0 +1,6 @@
+mixin btn(options)
+    - 
+        var className = "button"
+        className += " " + options.modif
+    button(class = className)
+        h3= options.title || "Button"

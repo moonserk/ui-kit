@@ -1,0 +1,43 @@
+@import '../constants'
+
+.checkbox-field__label
+    display: flex 
+    align-items: center
+    position: relative
+    cursor: pointer
+    user-select: none
+    height: 20px
+    width: 200px
+
+.checkbox-field__input
+    display: none
+    &:checked ~ .checkbox-field__checkmark:after
+        display: block
+
+.checkbox-field__text
+  margin-left: 30px
+  font-size: 14px
+  line-height: 18px
+  color: $DS50
+
+.checkbox-field__checkmark
+    position: absolute  
+    top: 0
+    left: 0
+    width: 20px
+    height: 20px
+    background: #FFFFFF
+    border: 1px solid $DS25
+    box-sizing: border-box
+    border-radius: 4px
+    &:after
+        content: ""
+        position: absolute
+        display: none
+        left: 5.05px
+        top: 2.05px
+        width: 6px
+        height: 8px
+        border: 1px solid $PURPLE
+        border-width: 0 2px 2px 0
+        transform: rotate(45deg)

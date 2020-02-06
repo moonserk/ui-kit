@@ -1,0 +1,51 @@
+@import ../constants
+
+.button
+    width: 99px
+    height: 44px
+    border-radius: 22px
+    &:hover
+        opacity: 0.5
+    &:active
+        opacity: 1
+
+.button-gradient
+    border: none
+    background-image: 
+    h3
+        color: $WHITE
+
+
+.button-text-only
+    border: none
+    background: rgba(0, 0, 0, 0)
+    h3
+        background: $GRADIENT
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+    &:hover
+        h3
+            background: $DS50
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+
+//TODO : border gradient
+.button-border-gradient
+    background: rgba(0, 0, 0, 0)
+    border-width: 2px
+    border-style: solid
+    border-color: $PURPLE
+    h3
+        background: $GRADIENT
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+//TODO : add arrow
+.button-long
+    width: 250px
+    border: none
+    background: $GRADIENT
+    h3
+        color: $WHITE
+
+   

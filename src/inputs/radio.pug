@@ -1,0 +1,12 @@
+mixin radio-field(text, name)
+  label.radio-field
+    p.radio-field__text= text
+    input(type="radio" nam=name).radio-field__input
+    span.radio-field__radiomark
+
+
+mixin radio-selector(options, name)
+  .radio-selecto
+    +radio-field(options.text, name)
+    +radio-field(options.text2, name)
+

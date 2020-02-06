@@ -1,0 +1,25 @@
+include ./buttons/button.pug
+include ./inputs/input.pug
+include ./inputs/select.pug
+include ./inputs/checkbox.pug
+include ./inputs/radio.pug
+include ./inputs/toggle.pug
+
+doctype html
+html
+  head
+    meta(character="UTF-8")
+    title FSD
+  body
+    h1.test Hello World #5
+    +btn({title: "burger", modif: "button-gradient"})
+    +btn({title: "burger", modif: "button-text-only"})
+    +btn({title: "burger", modif: "button-border-gradient"})
+    +btn({title: "burger", modif: "button-long"})
+    +inpt({title: "Email"})
+    +checkbox-field({text: "Что то такaе"})
+    +radio-selector({text: "Мужчина", text2: "Женщинв"}, "sex")
+    +toggle({text: "Some body told me"})
+      
+    script(src="./index.js")
+

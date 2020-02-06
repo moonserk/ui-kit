@@ -1,0 +1,43 @@
+@import '../constants'
+
+.radio-field
+  display: flex
+  align-items: center
+  position: relative
+  cursor: pointer
+  user-select: none
+  height: 24px
+
+.radio-field__input
+    display: none
+    &:checked ~ .radio-field__radiomark:after
+      display: block
+    &:checked ~ .radio-field__radiomark
+      border-color: $PURPLE 
+
+
+.radio-field__text
+  margin-left: 30px
+
+.radio-field__radiomark
+  display: flex
+  width: 20px
+  height: 20px
+  border: 1px solid $DS25
+  border-radius: 50%
+  position: absolute
+  top: 0
+  left: 0
+  justify-content: center
+  align-items: center
+  &:after
+    content: ""
+    display: none
+    position: absolute
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background: $GRADIENT
+
+.radio-selector
+  display: flex

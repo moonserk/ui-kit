@@ -1,0 +1,45 @@
+@import '../constants'
+
+.toggle
+  position: relative
+  display: flex
+  align-items: center
+  height: 20px
+  cursor: pointer
+  user-select: none
+  & .toggle__input
+    display: none
+    &:checked ~ .toggle__mark
+      justify-content: flex-end
+      border: 1px solid $PURPLE
+    &:checked ~ .toggle__mark:after
+      background: $GRADIENT
+
+.toggle__mark
+  position: absolute
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  width: 40px
+  height: 20px
+  border: 1px solid $DS25
+  border-radius: 10px
+  box-sizing: border-box
+  background: $WHITE
+  top: 0
+  left: 0
+  padding: 0px 4px 0px 4px
+  &:after
+    content: ""
+    position: absolute
+    display: flex
+    width: 12px
+    height: 12px
+    background: $DS25
+    border-radius: 50%
+
+.toggle__text
+  font-size: 14px
+  font-height: 24px
+  color: $DS75
+  margin-left: 50px
